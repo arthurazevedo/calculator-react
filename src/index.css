@@ -15,5 +15,19 @@ body {
   text-align: center;
 
   color: #fff;
-  background: linear-gradient(to right, rgb(83, 105, 118), rgb(41, 46, 73));
+  background: linear-gradient(to right, rgb(83, 105, 118), rgb(50, 58, 100));
+}
+
+.title {
+  font-size: 2.5em;
+}
+
+@media (max-width: 700px) {
+  body {
+    margin: 0;
+  }
+
+  .title {
+    display: none;
+  }
 }
