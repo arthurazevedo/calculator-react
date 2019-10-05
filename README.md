@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/davig-sousa/calculator-react" rel="noopener">
- <img width=200px height=200px src="./736663fe6f9e03fcb39ace9020c42b4c---cone-estacion--rio-de-calculadora-by-vexels.png" alt="Project logo"></a>
+ <img width=200px height=200px src="./logo.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">React Calculator</h3>
