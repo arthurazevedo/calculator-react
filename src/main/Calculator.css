@@ -13,6 +13,7 @@
     .calculator {
         height: 100vh;
         width: 100vw;
+        border-radius: 0;
         grid-template-rows: 1fr repeat(5, 16vh);
     }
 }

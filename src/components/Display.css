@@ -7,5 +7,12 @@
     align-items: center;
     padding: 20px;
     font-size: 2.8em;
-    overflow: hidden;
+}
+
+.hide {
+    font-size: 0;
+}
+
+.attention {
+    border: solid orange 3px;
 }
