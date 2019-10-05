@@ -65,5 +65,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## ✍️ Author <a name = "authors"></a>
 
-- [@davig_sousa](https://instagram.com/davig_sousa)
+- [@davig_sousa](https://instagram.com/davig_sousa) (Idea by: [This Course](https://www.udemy.com/course/curso-web/))
 
