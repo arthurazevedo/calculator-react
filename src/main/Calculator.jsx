@@ -72,30 +72,35 @@ export default class Calculator extends Component {
         }
     }
 
-    render() {
+    renderOption(option) {
         const addDigit = n => this.addDigit(n);
         const setOperation = op => this.setOperation(op);
+        let operators = ['=', '/', '*', '-', '+'];
+        if ((!isNaN(option) && option !== 0) ||(option === '.')) {
+            return <Button key={option} label={option} click={addDigit}/>
+        }
+        else if (operators.includes(option)){
+            return <Button key={option} label={option} click={setOperation} operation/>
+        }
+        else if (option === 'AC'){
+            return <Button key={option} label={option} click={() => this.clearMemory()} triple/>
+        }
+        else {
+            return <Button key={option} label={option} click={addDigit} double/>
+        }
+    }
 
+    render() {
+        const commands = [['AC', '/'], [7, 8, 9, '*'], [4, 5, 6,
+            '-'], [1, 2, 3, '+'], [0, '.', '=']];
         return (
             <div className="calculator">
                 <Display className={this.state.displayClass} value={this.state.displayValue} />
-                <Button label="AC" click={() => this.clearMemory()} triple/>
-                <Button label="/" click={setOperation} operation/>
-                <Button label="7" click={addDigit} />
-                <Button label="8" click={addDigit} />
-                <Button label="9" click={addDigit} />
-                <Button label="*" click={setOperation} operation/>
-                <Button label="4" click={addDigit} />
-                <Button label="5" click={addDigit} />
-                <Button label="6" click={addDigit} />
-                <Button label="-" click={setOperation} operation/>
-                <Button label="1" click={addDigit} />
-                <Button label="2" click={addDigit} />
-                <Button label="3" click={addDigit} />
-                <Button label="+" click={setOperation} operation/>
-                <Button label="0" click={addDigit} double/>
-                <Button label="." click={addDigit} />
-                <Button label="=" click={setOperation} operation/>
+                
+                {commands.map(command => (command.map(option => (
+                    this.renderOption(option)
+                ))))}
+
             </div>
         );
     }
